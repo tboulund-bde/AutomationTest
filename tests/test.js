@@ -8,5 +8,6 @@ test("Test1", async t => {
         .expect(Selector("ul.todo-list").child().count).eql(0)
         .typeText(".new-todo", "Water flowers")
         .pressKey("enter")
+        .takeScreenshot()
         .expect(Selector("ul.todo-list").child().count).eql(1);
 })
